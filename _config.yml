@@ -25,17 +25,17 @@ author:
   # Biographic information
   avatar           : "image1.jpg"
   name             : "Chunyu Zhao"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  pronouns         : "Mr"  
+  bio              : "Master's student in Remote sensing"
+  location         : "Beijing, China"
+  employer         : "Beijing Normal University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "chunyuz.zhao@gmail.com" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.co.uk/citations?user=WczTXKEAAAAJ&hl=zh-CN"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/yourorcidurl"
