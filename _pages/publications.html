@@ -17,6 +17,7 @@ author_profile: true
 {% assign all_pubs = site.publications | sort: 'date' | reverse %}
 
 {% comment %} 
+
   2. 期刊部分：全局统计并倒序编号
 {% endcomment %}
 {% assign journals = all_pubs | where: "type", "journal" %}
@@ -31,11 +32,10 @@ author_profile: true
       </li>
     {% endfor %}
   </ol>
-{% endif %}
-
-<br />
+{% endif %
 
 {% comment %} 
+
   3. 会议部分：重新独立统计并倒序编号
 {% endcomment %}
 {% assign conferences = all_pubs | where: "type", "conference" %}
