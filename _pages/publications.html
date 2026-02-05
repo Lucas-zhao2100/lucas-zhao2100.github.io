@@ -7,13 +7,34 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign my_name = "Chunyu Zhao" %}
-{% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% comment %} 按日期倒序排列所有论文 {% endcomment %}
+{% assign entries = site.publications | sort: 'date' | reverse %}
 
-{% for year in pubs_by_year %}
+{% comment %} 按年份分组 {% endcomment %}
+{% assign postsByYear = entries | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+{% for year in postsByYear %}
   <h2 id="{{ year.name }}" class="archive__subtitle">{{ year.name }}</h2>
   
-  {% for post in year.items %}
-    {% include archive-single.html %}
-  {% endfor %}
+  {% comment %} 处理该年份下的期刊文章 {% endcomment %}
+  {% assign journals = year.items | where: "type", "journal" %}
+  {% if journals.size > 0 %}
+    <p><strong>Journal articles</strong></p>
+    <ul>
+    {% for post in journals %}
+      {% include archive-single.html %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% comment %} 处理该年份下的会议论文 {% endcomment %}
+  {% assign conferences = year.items | where: "type", "conference" %}
+  {% if conferences.size > 0 %}
+    <p><strong>Conference papers</strong></p>
+    <ul>
+    {% for post in conferences %}
+      {% include archive-single.html %}
+    {% endfor %}
+    </ul>
+  {% endif %}
 {% endfor %}
