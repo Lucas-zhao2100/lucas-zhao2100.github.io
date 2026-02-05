@@ -1,5 +1,15 @@
-/* Publications / Pages 正文两端对齐 */
-.page__content p {
+/* ===== Publications 正文两端对齐 ===== */
+
+/* publication 列表页 */
+.archive__item-excerpt,
+.archive__item-body p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+}
+
+/* publication 单篇页面 */
+.layout--single .page__content p {
   text-align: justify;
   text-justify: inter-word;
   line-height: 1.6;
