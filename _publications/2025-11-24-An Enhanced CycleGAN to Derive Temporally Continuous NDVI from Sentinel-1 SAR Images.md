@@ -2,8 +2,9 @@
 title: "An Enhanced CycleGAN to Derive Temporally Continuous NDVI from Sentinel-1 SAR Images"
 collection: publications
 category: manuscripts
-permalink: https://www.mdpi.com/2072-4292/18/1/56
+paperurl: https://www.mdpi.com/2072-4292/18/1/56
 excerpt: 'An enhanced CycleGAN is developed to derive a high-fidelity, temporally continuous normalized difference vegetation index (NDVI) from SAR imagery to be a robust and effective solution for overcoming data gaps in optical time series.'
+show_post_navigation: false
 date: 2025-11-24
 venue: 'Remote Sensing'
 citation: 'Wang, Anqi, Zhiqiang Xiao, Chunyu Zhao, Juan Li, Yunteng Zhang, Jinling Song and Hua Yang. “An Enhanced CycleGAN to Derive Temporally Continuous NDVI from Sentinel-1 SAR Images.” Remote Sensing (2025): n. pag.'
