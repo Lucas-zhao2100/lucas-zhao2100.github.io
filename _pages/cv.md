@@ -21,7 +21,7 @@ redirect_from:
 * 2023 Outstanding Graduate, China University of Geosciences (Beijing)
 * 2019-2022 Award for Grade Academic Scholarship, China University of Geosciences (Beijing)
   
-## 📚 Publications
+📚 **Publications**
 
 {% assign all_pubs = site.publications | sort: 'date' | reverse %}
 
