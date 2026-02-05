@@ -8,20 +8,26 @@ redirect_from:
 ---
 
 <style>
-  /* 这里的代码会精准隐藏掉模板自动生成的第二个 News 区域 */
-  .page__content ~ h2, 
-  .page__content ~ .archive__item,
-  .archive__subtitle {
+  /* 隐藏重复 News 的代码 */
+  .page__content ~ h2, .page__content ~ .archive__item, .archive__subtitle {
     display: none !important;
+  }
+
+  /* 设置正文段落两端对齐，并增加一点行间距，看起来更专业 */
+  .page__content p {
+    text-align: justify;
+    text-justify: inter-word; /* 针对浏览器优化间距 */
+    line-height: 1.6;        /* 适当的行高会让阅读更舒适 */
   }
 </style>
 
 About Me
 ========
-**Hi there, I'm Chunyu Zhao 👋**
-I am currently a Master's student at the **Faculty of Geographical Science, Beijing Normal University**, under the supervision of [Prof. Zhiqiang Xiao](https://geot.bnu.edu.cn/Public/htm/news/5/172.html). I am a member of the [MUSES (MUltiscale Satellite remotE Sensing)](https://muses.bnu.edu.cn/) team. My research sits at the intersection of Remote Sensing, Deep Learning, and **Geological Sciences**. 
 
-Before joining BNU, I obtained my **B.E.** in **Resources Prospecting Engineering (Solid Mineral Resources)** from [**China University of Geosciences (Beijing)**](https://www.cugb.edu.cn/) in 2019, where I graduated as an **Outstanding Graduate**. My undergraduate thesis was completed under the guidance of [**Prof. Gongwen Wang**](https://www.researchgate.net/profile/Gongwen-Wang). 
+**Hi there, I'm Chunyu Zhao 👋**<br>
+I am currently a Master's student at the [Beijing Normal University](https://www.bnu.edu.cn/), under the supervision of [Prof. Zhiqiang Xiao](https://geot.bnu.edu.cn/Public/htm/news/5/172.html). I am a member of the [MUSES (MUltiscale Satellite remotE Sensing)](https://muses.bnu.edu.cn/) team. My research sits at the intersection of Remote Sensing, Deep Learning, and Geological Sciences. 
+
+Before joining BNU, I obtained my B.E. in Resources Prospecting Engineering (Solid Mineral Resources) from [China University of Geosciences (Beijing)](https://www.cugb.edu.cn/) in 2019, where I graduated as an **Outstanding Graduate. My undergraduate thesis was completed under the guidance of [Prof. Gongwen Wang](https://www.researchgate.net/profile/Gongwen-Wang). 
 
 My reseaarch interets include:
 ------
