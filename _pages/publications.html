@@ -5,50 +5,31 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-<div class="wordwrap">
-  You can also find my articles on
-  <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
-</div>
-{% endif %}
+{% include base_path %}
 
-{% assign pubs = site.publications | sort: "year" | reverse %}
-{% assign years = pubs | map: "year" | uniq %}
+{% assign pubs_by_year = site.publications | group_by: "year" | sort: "name" | reverse %}
 
-{% for year in years %}
-  <h2>{{ year }}</h2>
-  <hr />
+{% for year in pubs_by_year %}
+## {{ year.name }}
 
-  {% assign year_pubs = pubs | where: "year", year %}
-
-  {% assign journals = year_pubs | where: "type", "journal" %}
-  {% if journals.size > 0 %}
-    <h3>Journal Articles</h3>
-    <ul>
-      {% for pub in journals %}
-        <li>
-          {{ pub.authors }} ({{ pub.year }}).
-          <em>{{ pub.title }}</em>.
-          {{ pub.venue }}{% if pub.volume %}, {{ pub.volume }}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.
-          <a href="{{ pub.paperurl }}" target="_blank">[Link]</a>
-        </li>
-      {% endfor %}
-    </ul>
+### Journal Articles
+{% for post in year.items %}
+  {% if post.type == "journal" %}
+- {{ post.citation }}
+  {% if post.paperurl %}
+  [Link]({{ post.paperurl }})
   {% endif %}
-
-  {% assign conferences = year_pubs | where: "type", "conference" %}
-  {% if conferences.size > 0 %}
-    <h3>Conference Papers</h3>
-    <ul>
-      {% for pub in conferences %}
-        <li>
-          {{ pub.authors }} ({{ pub.year }}).
-          <em>{{ pub.title }}</em>.
-          {{ pub.venue }}.
-          <a href="{{ pub.paperurl }}" target="_blank">[Link]</a>
-        </li>
-      {% endfor %}
-    </ul>
   {% endif %}
+{% endfor %}
+
+### Conference Papers
+{% for post in year.items %}
+  {% if post.type == "conference" %}
+- {{ post.citation }}
+  {% if post.paperurl %}
+  [Link]({{ post.paperurl }})
+  {% endif %}
+  {% endif %}
+{% endfor %}
 
 {% endfor %}
