@@ -27,7 +27,7 @@ redirect_from:
 
 ### Journal Articles
 {% assign journals = all_pubs | where: "type", "journal" %}
-<ol reversed start="{{ journals.size }}" style="margin-left: 2em;">
+<ol reversed start="{{ journals.size }}" style="margin-left: 0;">
   {% for post in journals %}
     <li style="margin-bottom: 0.8em;">
       {{ post.citation }} 
@@ -36,11 +36,9 @@ redirect_from:
   {% endfor %}
 </ol>
 
-<br />
-
 ### Conference Papers
 {% assign conferences = all_pubs | where: "type", "conference" %}
-<ol reversed start="{{ conferences.size }}" style="margin-left: 2em;">
+<ol reversed start="{{ conferences.size }}" style="margin-left: 0;">
   {% for post in conferences %}
     <li style="margin-bottom: 0.8em;">
       {{ post.citation }} 
